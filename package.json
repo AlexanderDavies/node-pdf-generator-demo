@@ -1,0 +1,20 @@
+{
+  "name": "pdf-generator",
+  "version": "1.0.0",
+  "description": "Generate pdf reports from html template with Node.Js, puppeteer, ejs and chart.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "puppeteer": "^1.20.0"
+  }
+}

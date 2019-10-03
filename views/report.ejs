@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title><%= fullName %> Report</title>
+        <link rel="stylesheet" href="/main.css">
+    </head>
+    <body>
+        <header>
+            <div class="header__title"><%= fullName %></div>
+            <div class="header__banner"><p>report</p></div>
+        </header>
+        <main>
+            <div class="chart">
+                <canvas id="chart" width="100px" height="100px"></canvas>
+            </div>
+            <div class="summary-container">
+                <h1>BEHAVIORAL IMPLICATIONS</h1>
+                <p>You scored in the...</p>
+            </div>
+            <div class="summary-container">
+                <h1>LEADERSHIP IMPLICATIONS</h1>
+                <p>You attend to approach new projects...</p>
+            </div>
+            <div class="summary-container">
+                <h1>COMPETENCY ANALYSIS</h1>
+                <p>&#8226; COMPOSURE: Co-workers will see you as enthusiastic about new projects...</p>
+            </div>
+            <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" class="info__icon" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <p class="bullet-point">&#8226; source code available at github.com/alexanderdavies </p>
+            </div>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+        <script>
+                var ctx = document.getElementById('chart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'horizontalBar',
+                    data: {
+                        labels: ['Excitable', 'Sceptical', 'Cautious', 'Reserved', 'Leisurely', 'Bold'],
+                        datasets: [{
+                            label: 'Percentiles',
+                            data: [70, 50, 80, 95, 65, 70],
+                            backgroundColor: [
+                                'rgba(255, 0, 0, 0.5)',
+                                'rgba(192, 192, 192, 0.5)',
+                                'rgba(192, 192, 192, 0.5)',
+                                'rgba(192, 192, 192, 0.5)',
+                                'rgba(192, 192, 192, 0.5)',
+                                'rgba(192, 192, 192, 0.5)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 0, 0, 0.2)',
+                                'rgba(192, 192, 192, 0.2)',
+                                'rgba(192, 192, 192, 0.2)',
+                                'rgba(192, 192, 192, 0.2)',
+                                'rgba(192, 192, 192, 0.2)',
+                                'rgba(192, 192, 192, 0.2)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+        </script>
+    </body>
+</html>
+
