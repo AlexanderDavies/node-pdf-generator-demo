@@ -1,6 +1,6 @@
 # NodePdfGenerator
 
-This demo demonstrates HTML pdf generation using Node, Puppeteer, ejs render engine and Chart.js
+This demo demonstrates HTML pdf generation using Node w/ nest.js, Puppeteer, ejs render engine and Chart.js
 
 ![alt text](./public/Alex_Davies_Report_Browser.png)
 
@@ -8,15 +8,16 @@ This demo demonstrates HTML pdf generation using Node, Puppeteer, ejs render eng
 
 ### Installing
 
-Run `npm start` to run the Node.js app server with Nodemon. The server listens on `http://localhost:3000/`. Nodemon will restart the Node server when source files are changed.
+Run `npm start`
+The server listens on `http://localhost:3000/`.
 
-avigate to `http://localhost:3000/save-report` to generate a PDF of the web page. The PDF will be located in the reports folder.
+Navigate to `http://localhost:3000/chart` and click the button to generatte the report.
 
 ## Built With
 
-npm version 6.90
+npm version 6.14.3
 
-node v10.16.3
+node v14.2.0
 
 see package.json.
 

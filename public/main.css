@@ -113,3 +113,26 @@ canvas {
   display: block;
 }
 
+.button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container button {
+  inset: none;
+  color: white;
+  background-color: rgb(55, 55, 187);
+  height: 3rem;
+  padding: 0 1.5rem;
+  border: 2px solid white;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-container button:focus {
+  outline:0;
+}
